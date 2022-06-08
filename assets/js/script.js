@@ -34,28 +34,6 @@ function checkForMath() {
     unflipCard();
 }
 
-function fimDeJogo() {
-    if (firstCard.dataset.card === secondCard.dataset.card) {
-        cardsFliped = cardsFliped + 1;
-
-        reloadShowFinalMessage(cardsFliped);
-
-    }
-}
-
-function reloadShowFinalMessage(cardsFliped) {
-    if (cardsFliped === 6) {
-        setTimeout(() => {
-
-            mensagemFinal.style.display = 'block';
-
-            setTimeout(() => {
-                location.reload();
-            }, 1500);
-        }, 1000);
-    }
-}
-
 
 function disableCards() {
     firstCard.removeEventListener("click", flipCard);
@@ -86,6 +64,28 @@ function resetBoard() {
         card.style.order = randomPosition;
     });
 })();
+
+function fimDeJogo() {
+    if (firstCard.dataset.card === secondCard.dataset.card) {
+        cardsFliped = cardsFliped + 1;
+
+       return reloadShowFinalMessage(cardsFliped);
+
+    }
+}
+
+function reloadShowFinalMessage(cardsFliped) {
+    if (cardsFliped === 6) {
+        setTimeout(() => {
+
+            mensagemFinal.style.display = 'block';
+
+            setTimeout(() => {
+                location.reload();
+            }, 1500);
+        }, 1000);
+    }
+}
 
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
