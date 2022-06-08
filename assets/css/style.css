@@ -145,10 +145,12 @@ body {
 }
 
 .default, .interrogacao, .Libertadores,.UCL,.controle{
-    background-color: black;
-    color: white;
+    background-color: rgba(128,128,128,0.5);
+    color: black;
+    font-weight: bold;
     padding: 2px 10px;
     border-radius: 5px;
+    border: none;
 }
 
 .default:hover, .interrogacao:hover, .Libertadores:hover,.UCL:hover,.controle:hover{

@@ -118,7 +118,7 @@ cards.forEach(card => {
 changeMode(btn, actualModeParagraph, body, actualModeDiv, cards);
 
 
-// Muidar CardBack
+// Mudar CardBack
 
 changeCardBacksOriginal(defaultCardBack, cardBack);
 changeCardBacksInterrogacao(interrogations, cardBack);

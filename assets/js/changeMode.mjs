@@ -1,4 +1,4 @@
-function changeMode(btn, text, body, actualMode, cardFrontBack, h1) {
+function changeMode(btn, text, body, actualMode, cardFrontBack) {
 
     const darkMode = "Dark Mode";
     const lightMode = "Light Mode";
