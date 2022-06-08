@@ -1,6 +1,6 @@
 import { shuffle } from "./embaralhar.mjs";
 import { changeMode } from "./changeMode.mjs";
-
+import { changeCardBacksOriginal, changeCardBacksInterrogacao, changeCardBacksLibertadores, changeCardBacksUCL, changeCardBacksXbox } from "./changeCardBacks.mjs";
 
 // ChangeMode Elements
 const body = document.getElementsByTagName("body")[0];
@@ -19,7 +19,7 @@ const libertadores = document.querySelector(".Libertadores");
 const ucl = document.querySelector(".UCL");
 const controller = document.querySelector(".controle");
 
-
+// ---------------------------------------------------------------
 const cardBack = document.getElementsByClassName("card-back");
 const cards = document.querySelectorAll(".card");
 let hasflipped = false;
@@ -116,3 +116,8 @@ cards.forEach(card => {
 
 // Tema 2 - Adicionando as IMGs
 
+changeCardBacksOriginal(defaultCardBack, cardBack);
+changeCardBacksInterrogacao(interrogations, cardBack);
+changeCardBacksLibertadores(libertadores, cardBack);
+changeCardBacksUCL(ucl, cardBack);
+changeCardBacksXbox(controller, cardBack);
