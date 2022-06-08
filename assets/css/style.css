@@ -46,6 +46,8 @@ body {
     transform-style: preserve-3d;
     /* Não deixa o elemento achatado no Plano*/
     transition: transform .9s;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
 .card:active {
@@ -59,8 +61,6 @@ body {
     height: 100%;
     padding: 20px;
     position: absolute;
-    border-radius: 5px;
-    background: #fff;
     backface-visibility: hidden;
     /* Propriedade que retira o verso do elemento */
 }
@@ -120,3 +120,14 @@ body {
     color: white;
 }
 
+.lightModeBackground{
+    background-color: #fff;
+}
+
+.lightModeText{
+    color: black;
+}
+
+.darkMode{
+    background-color: rgba(37, 36, 36, 0.945);
+}

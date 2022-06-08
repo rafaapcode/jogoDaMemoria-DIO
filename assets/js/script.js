@@ -1,10 +1,16 @@
 import { shuffle } from "./embaralhar.mjs";
 import { changeMode } from "./changeMode.mjs";
 
+
+// ChangeMode Elements
 const body = document.getElementsByTagName("body")[0];
 const actualModeDiv = document.querySelector(".actualMode");
 const btn = document.querySelector("#btn");
-const actualMode = document.querySelector(".actualMode p");
+const actualModeParagraph = document.querySelector(".actualMode p");
+const cardFront = document.querySelector(".card .card-front");
+
+// -------------------------------------------------------------
+
 const cards = document.querySelectorAll(".card");
 let hasflipped = false;
 let firstCard, secondCard;
@@ -12,7 +18,7 @@ let lockBoard = false;
 let cardsFliped = 0;
 const mensagemFinal = document.querySelector(".memory-game h1");
 
-changeMode(btn, actualMode, body, actualModeDiv);
+changeMode(btn, actualModeParagraph, body, actualModeDiv, cards);
 
 function flipCard() {
     if (lockBoard) return;

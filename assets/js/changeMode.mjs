@@ -1,4 +1,4 @@
-function changeMode(btn, text, body, actualMode) {
+function changeMode(btn, text, body, actualMode, cardFrontBack, h1) {
 
     const darkMode = "Dark Mode";
     const lightMode = "Light Mode";
@@ -10,20 +10,21 @@ function changeMode(btn, text, body, actualMode) {
 
 
     const changetext = () => {
-        text.classList.toggle("TextoAdd");
-        let haveClass = text.classList.contains("darkMode");
+        actualMode.classList.toggle("lightModeText");
+        let haveClass = actualMode.classList.contains("lightModeText");
         if (haveClass) {
             text.innerHTML = lightMode + " ON";
-            actualMode.style.color = "black";
         } else {
             text.innerHTML = darkMode + " ON";
-            actualMode.style.color = "white";
         }
     };
 
-
     const changeStyles = () => {
-        body.style.backgroundColor = "white";
+        body.classList.toggle("lightModeBackground");
+
+        cardFrontBack.forEach(card => {
+            card.classList.toggle("darkMode");
+        });
     };
 
 }
