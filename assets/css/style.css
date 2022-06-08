@@ -151,8 +151,10 @@ body {
     padding: 2px 10px;
     border-radius: 5px;
     border: none;
+    transition: .5s;
 }
 
 .default:hover, .interrogacao:hover, .Libertadores:hover,.UCL:hover,.controle:hover{
     cursor: pointer;
+    transform: scale(1.1);
 }
