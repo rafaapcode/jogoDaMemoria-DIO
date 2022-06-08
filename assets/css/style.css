@@ -131,3 +131,26 @@ body {
 .darkMode{
     background-color: rgba(37, 36, 36, 0.945);
 }
+
+.selectCarBacks{
+    position: absolute;
+    top: 20%;
+    border-radius: 5px;
+    width: 15%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.default, .interrogacao, .Libertadores,.UCL,.controle{
+    background-color: black;
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+.default:hover, .interrogacao:hover, .Libertadores:hover,.UCL:hover,.controle:hover{
+    cursor: pointer;
+}

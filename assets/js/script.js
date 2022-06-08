@@ -11,12 +11,24 @@ const cardFront = document.querySelector(".card .card-front");
 
 // -------------------------------------------------------------
 
+// Muda CardBack
+
+const defaultCardBack = document.querySelector(".default");
+const interrogations = document.querySelector(".interrogacao");
+const libertadores = document.querySelector(".Libertadores");
+const ucl = document.querySelector(".UCL");
+const controller = document.querySelector(".controle");
+
+
+const cardBack = document.getElementsByClassName("card-back");
 const cards = document.querySelectorAll(".card");
 let hasflipped = false;
 let firstCard, secondCard;
 let lockBoard = false;
 let cardsFliped = 0;
 const mensagemFinal = document.querySelector(".memory-game h1");
+
+
 
 changeMode(btn, actualModeParagraph, body, actualModeDiv, cards);
 
@@ -101,3 +113,6 @@ function reloadShowFinalMessage(cardsFliped) {
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+
+// Tema 2 - Adicionando as IMGs
+
