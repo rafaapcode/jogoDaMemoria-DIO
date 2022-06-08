@@ -2,16 +2,16 @@ import { shuffle } from "./embaralhar.mjs";
 import { changeMode } from "./changeMode.mjs";
 import { changeCardBacksOriginal, changeCardBacksInterrogacao, changeCardBacksLibertadores, changeCardBacksUCL, changeCardBacksXbox } from "./changeCardBacks.mjs";
 
-// ChangeMode Elements
+
+// Elementos usados no Change Mode
 const body = document.getElementsByTagName("body")[0];
 const actualModeDiv = document.querySelector(".actualMode");
 const btn = document.querySelector("#btn");
 const actualModeParagraph = document.querySelector(".actualMode p");
 const cardFront = document.querySelector(".card .card-front");
 
-// -------------------------------------------------------------
 
-// Muda CardBack
+// Elementos usado para mudar o CardBack
 
 const defaultCardBack = document.querySelector(".default");
 const interrogations = document.querySelector(".interrogacao");
@@ -19,7 +19,9 @@ const libertadores = document.querySelector(".Libertadores");
 const ucl = document.querySelector(".UCL");
 const controller = document.querySelector(".controle");
 
-// ---------------------------------------------------------------
+
+
+// Elementos usados para fazer o jogo
 const cardBack = document.getElementsByClassName("card-back");
 const cards = document.querySelectorAll(".card");
 let hasflipped = false;
@@ -28,9 +30,6 @@ let lockBoard = false;
 let cardsFliped = 0;
 const mensagemFinal = document.querySelector(".memory-game h1");
 
-
-
-changeMode(btn, actualModeParagraph, body, actualModeDiv, cards);
 
 function flipCard() {
     if (lockBoard) return;
@@ -114,7 +113,12 @@ cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
 
-// Tema 2 - Adicionando as IMGs
+// Mudar tema
+
+changeMode(btn, actualModeParagraph, body, actualModeDiv, cards);
+
+
+// Muidar CardBack
 
 changeCardBacksOriginal(defaultCardBack, cardBack);
 changeCardBacksInterrogacao(interrogations, cardBack);
