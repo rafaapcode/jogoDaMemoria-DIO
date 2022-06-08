@@ -19,7 +19,7 @@ body {
     perspective: 1000px;
 }
 
-.memory-game h1{
+.memory-game h1 {
     position: absolute;
     z-index: 1;
     background-color: black;
@@ -39,31 +39,72 @@ body {
     box-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
     cursor: pointer;
     transform: scale(1);
-    transform-style: preserve-3d; /* Não deixa o elemento achatado no Plano*/
+    transform-style: preserve-3d;
+    /* Não deixa o elemento achatado no Plano*/
     transition: transform .9s;
 }
- 
-.card:active{
+
+.card:active {
     transform: scale(0.97);
     transition: transform .3s;
 }
 
-.card-front, .card-back{
+.card-front,
+.card-back {
     width: 100%;
     height: 100%;
     padding: 20px;
     position: absolute;
     border-radius: 5px;
     background: #fff;
-    backface-visibility: hidden; /* Propriedade que retira o verso do elemento */
+    backface-visibility: hidden;
+    /* Propriedade que retira o verso do elemento */
 }
 
-.card-front{
+.card-front {
     transform: rotateY(180deg);
 }
 
 /* Flip Card Animation */
 
-.card.flip{
+.card.flip {
     transform: rotateY(180deg);
+}
+
+/* Change Modes */
+
+.modesBTN {
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, white, rgb(36, 34, 34), rgb(36, 34, 34));
+    width: 8%;
+    height: 4%;
+    left: 1%;
+    top: 1%;
+}
+
+.modesBTN #btn {
+    margin-left: 15%;
+    border-radius: 50%;
+    height: 70%;
+    width: 20%;
+    background-color: rgb(43, 40, 40);
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px black;
+    transform: translateX(0);
+    transition: transform .5s;
+}
+
+.modesBTN #btnclick{
+    display: none;
+}
+
+.modesBTN #btn:hover{
+    cursor: pointer;
+}
+
+.modesBTN #btnclick:checked + #btn{
+    transform: translateX(55px);
 }
