@@ -1,3 +1,5 @@
+import { shuffle } from "./embaralhar.mjs";
+
 const cards = document.querySelectorAll(".card");
 let hasflipped = false;
 let firstCard, secondCard;
@@ -26,20 +28,12 @@ function flipCard() {
 
 function checkForMath() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
-        fimDeJogo();
+        fimDeJogo(firstCard, secondCard, cardsFliped);
         disableCards();
         return;
     }
 
     unflipCard();
-}
-
-
-function disableCards() {
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-
-    resetBoard();
 }
 
 function unflipCard() {
@@ -53,23 +47,28 @@ function unflipCard() {
     }, 1000);
 }
 
+function disableCards() {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+
+    resetBoard();
+}
+
+
 function resetBoard() {
     [hasflipped, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
 }
 
-(function shuffle() {
-    cards.forEach((card) => {
-        let randomPosition = Math.floor(Math.random() * 12);
-        card.style.order = randomPosition;
-    });
-})();
+shuffle();
+
+
 
 function fimDeJogo() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
         cardsFliped = cardsFliped + 1;
 
-       return reloadShowFinalMessage(cardsFliped);
+        return reloadShowFinalMessage(cardsFliped);
 
     }
 }
