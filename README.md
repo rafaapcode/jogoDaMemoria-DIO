@@ -1,6 +1,6 @@
 # jogo da Memória
 ### Sobre o Projeto
- - Cria um jogo da memória
+ - Criar um jogo da memória
 
 #### Implementações
  - Mudar o tema de Dark para Light e vice-versa.
