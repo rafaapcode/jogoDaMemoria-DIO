@@ -19,6 +19,18 @@ body {
     perspective: 1000px;
 }
 
+.memory-game h1{
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    padding: 50px;
+    color: white;
+    top: 37.5%;
+    left: 13%;
+    font-size: 52px;
+    display: none;
+}
+
 .card {
     height: calc(33.333% - 10px);
     width: calc(25% - 10px);
