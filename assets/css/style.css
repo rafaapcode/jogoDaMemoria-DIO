@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
 }
 
 body {
@@ -26,9 +29,10 @@ body {
     padding: 50px;
     color: white;
     top: 37.5%;
-    left: 13%;
+    left: 6%;
     font-size: 52px;
     display: none;
+    border-radius: 5px;
 }
 
 .card {
@@ -90,8 +94,7 @@ body {
     border-radius: 50%;
     height: 70%;
     width: 20%;
-    background-color: rgb(43, 40, 40);
-    border: 1px solid gray;
+    background-color: rgb(255,255,255);
     box-shadow: 1px 1px 1px black;
     transform: translateX(0);
     transition: transform .5s;
@@ -107,4 +110,13 @@ body {
 
 .modesBTN #btnclick:checked + #btn{
     transform: translateX(55px);
+    background-color: rgb(49, 45, 45);
 }
+
+.actualMode{
+    position: absolute;
+    left: 10%;
+    top: 1.7%;
+    color: white;
+}
+
